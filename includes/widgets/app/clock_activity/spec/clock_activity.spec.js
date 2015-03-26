@@ -12,10 +12,10 @@ define( [
       var testBed_;
 
       beforeEach( function setup() {
-         testBed_ = ax.testing.portalMocksAngular.createControllerTestBed( 'mva/clock_activity' );
+         testBed_ = ax.testing.portalMocksAngular.createControllerTestBed( 'app/clock_activity' );
          testBed_.featuresMock = {
             clock: {
-               resource: "myCLock"
+               resource: "myClock"
             }
          };
 

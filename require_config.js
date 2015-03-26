@@ -5,9 +5,7 @@ var require = {
    ],
    shim: {
       angular: {
-         deps: [
-            'jquery'
-         ],
+         deps: [],
          exports: 'angular'
       },
       'angular-mocks': {
@@ -56,7 +54,6 @@ var require = {
    paths: {
       // LaxarJS Core:
       requirejs: 'requirejs/require',
-      jquery: 'jquery/dist/jquery',
       angular: 'angular/angular',
       'angular-route': 'angular-route/angular-route',
       'angular-sanitize': 'angular-sanitize/angular-sanitize',
@@ -64,9 +61,10 @@ var require = {
       jjve: 'jjve/jjve',
 
       // LaxarJS Core Testing:
+      jquery: 'jquery/dist/jquery',
+      'angular-mocks': 'angular-mocks/angular-mocks',
       jasmine: 'jasmine/lib/jasmine-core/jasmine',
       q_mock: 'q_mock/q',
-      'angular-mocks': 'angular-mocks/angular-mocks',
 
       // LaxarJS Core Legacy:
       text: 'requirejs-plugins/lib/text',
