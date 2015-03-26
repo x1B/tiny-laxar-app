@@ -6,9 +6,9 @@
    "dependencies": {
       "requirejs": "2.1.x",
       "requirejs-plugins": "1.0.x",
-      "laxar": "LaxarJS/laxar#0.x",
-      "laxar_uikit": "LaxarJS/laxar_uikit#0.x",
-      "laxar_patterns": "LaxarJS/laxar_patterns#0.x"
+      "laxar": "./includes/lib/laxar",
+      "laxar_uikit": "./includes/lib/laxar_uikit",
+      "laxar_patterns": "./includes/lib/laxar_patterns"
    },
    "devDependencies": {
       "es5-shim": "2.3.x",

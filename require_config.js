@@ -60,17 +60,17 @@ var require = {
    packages: [
       {
          name: 'laxar',
-         location: 'laxar',
+         location: '../includes/lib/laxar',
          main: 'laxar'
       },
       {
          name: 'laxar_patterns',
-         location: 'laxar_patterns',
+         location: '../includes/lib/laxar_patterns',
          main: 'laxar_patterns'
       },
       {
          name: 'laxar_uikit',
-         location: 'laxar_uikit',
+         location: '../includes/lib/laxar_uikit',
          main: 'laxar_uikit'
       },
       {
