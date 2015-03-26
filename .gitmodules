@@ -1,9 +1,9 @@
 [submodule "includes/lib/laxar"]
 	path = includes/lib/laxar
-	url = git@github.com:LaxarJS/laxar.git
+	url = https://github.com/LaxarJS/laxar.git
 [submodule "includes/lib/laxar_patterns"]
 	path = includes/lib/laxar_patterns
-	url = git@github.com:LaxarJS/laxar_patterns.git
+	url = https://github.com/LaxarJS/laxar_patterns.git
 [submodule "includes/lib/laxar_uikit"]
 	path = includes/lib/laxar_uikit
-	url = git@github.com:LaxarJS/laxar_uikit.git
+	url = https://github.com/LaxarJS/laxar_uikit.git

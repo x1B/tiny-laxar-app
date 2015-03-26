@@ -94,22 +94,7 @@ module.exports = function( grunt ) {
                },
                name: '../init',
                out: 'var/build/optimized_init.js',
-               optimize: 'uglify2',
-               done: function(done, output) {
-                  var duplicates = require('rjs-build-analysis').duplicates(output);
-
-                  if (Object.keys(duplicates).length > 0) {
-                     grunt.log.subhead('Duplicates found in requirejs build:');
-                     for (var key in duplicates) {
-                        grunt.log.error(duplicates[key] + ": " + key);
-                     }
-                     return done(new Error('r.js built duplicate modules, please check the excludes option.'));
-                  } else {
-                     grunt.log.success("No duplicates found!");
-                  }
-
-                  done();
-               }
+               optimize: 'uglify2'
             }
          }
       },
