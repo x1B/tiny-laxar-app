@@ -1,14 +1,11 @@
 /**
- * Copyright 2015 Michael Kurze
+ * Copyright 2015 aixigo AG
  */
 define( [
    'angular',
    'laxar_patterns'
 ], function( ng, patterns ) {
    'use strict';
-
-   var moduleName = 'simpleWidget';
-   var module     = ng.module( moduleName, [] );
 
    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -19,10 +16,8 @@ define( [
       patterns.resources.handlerFor( $scope ).registerResourceFromFeature( 'clock' );
    }
 
-   module.controller( 'SimpleWidgetController', Controller );
-
    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-   return module;
+   return ng.module(  'simpleWidget', [] ).controller( 'SimpleWidgetController', Controller );
 
 } );

@@ -1,7 +1,7 @@
 {
-   "name": "app-without-jquery",
+   "name": "tiny-laxar-app",
    "version": "0.1.0-pre",
-   "description": "A very simple application to explore what is essential in a LaxarJS app.",
+   "description": "A very simple application to explore what is *essential* in a LaxarJS app.",
    "private": true,
    "dependencies": {
       "requirejs": "2.1.x",

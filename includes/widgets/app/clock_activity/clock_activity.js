@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Michael Kurze
+ * Copyright 2015 aixigo AG
  */
 define( [
    'angular'

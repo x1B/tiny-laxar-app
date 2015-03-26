@@ -40,11 +40,11 @@ module.exports = function( grunt ) {
             options: {
                keepSpecialComments: 0
             },
-            files: [{
+            files: [ {
                expand: true,
                src: 'var/static/css/*.theme.css',
                ext: '.min.css'
-            }]
+            } ]
          }
       },
       directory_tree: {
@@ -64,17 +64,11 @@ module.exports = function( grunt ) {
                ]
             }
          },
-         bower_components: {
-            dest: 'var/listing/bower_components_resources.json',
-            src: [
-               'bower_components/laxar_uikit/themes/**/*.css',
-               'bower_components/laxar_uikit/controls/**/*.+(css|html)'
-            ],
-            embedContents: [ 'bower_components/laxar_uikit/controls/**/*.html' ]
-         },
          includes: {
             dest: 'var/listing/includes_resources.json',
             src: [
+               'includes/lib/laxar_uikit/themes/**/*.css',
+               'includes/lib/laxar_uikit/controls/**/*.+(css|html)',
                'includes/themes/**/*.+(css|html)',
                'includes/widgets/*/*/*.+(css|html|json)',
                '!includes/widgets/*/*/+(package|bower).json',
@@ -82,6 +76,7 @@ module.exports = function( grunt ) {
             ],
             options: {
                embedContents: [
+                  'bower_components/laxar_uikit/controls/**/*.html',
                   'includes/themes/**/controls/**/*.html',
                   'includes/widgets/*/*/widget.json',
                   'includes/widgets/*/*/*.theme/*.html',
@@ -94,9 +89,27 @@ module.exports = function( grunt ) {
          default: {
             options: {
                mainConfigFile: 'require_config.js',
+               wrap: {
+                  startFile: 'require_config.js'
+               },
                name: '../init',
                out: 'var/build/optimized_init.js',
-               optimize: 'uglify2'
+               optimize: 'uglify2',
+               done: function(done, output) {
+                  var duplicates = require('rjs-build-analysis').duplicates(output);
+
+                  if (Object.keys(duplicates).length > 0) {
+                     grunt.log.subhead('Duplicates found in requirejs build:');
+                     for (var key in duplicates) {
+                        grunt.log.error(duplicates[key] + ": " + key);
+                     }
+                     return done(new Error('r.js built duplicate modules, please check the excludes option.'));
+                  } else {
+                     grunt.log.success("No duplicates found!");
+                  }
+
+                  done();
+               }
             }
          }
       },

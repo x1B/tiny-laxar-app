@@ -1,7 +1,7 @@
 {
-   "name": "mva/clock_activity",
+   "name": "app/clock_activity",
    "version": "0.1.0",
-   "description": "My new LaxarJS activity",
+   "description": "A simple activity publishing a clock resource",
    "private": true,
    "dependencies": {
       "laxar": "LaxarJS/laxar#0.x",

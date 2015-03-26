@@ -4,7 +4,7 @@
    "areas": {
       "activities": [
          {
-            "widget": "mva/clock_activity",
+            "widget": "app/clock_activity",
             "features": {
                "clock": {
                   "resource": "theClock"
@@ -18,7 +18,7 @@
 
       "content": [
          {
-            "widget": "mva/simple_widget",
+            "widget": "app/simple_widget",
             "features": {
                "clock": {
                   "resource": "theClock"

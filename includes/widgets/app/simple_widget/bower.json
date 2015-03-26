@@ -1,12 +1,11 @@
 {
-   "name": "mva/simple_widget",
+   "name": "app/simple_widget",
    "version": "0.1.0",
-   "description": "My new LaxarJS widget",
+   "description": "A simple widget that displays time from a resource",
    "private": true,
    "dependencies": {
       "laxar": "LaxarJS/laxar#0.x",
-      "laxar_patterns": "LaxarJS/laxar_patterns#0.x",
-      "laxar_uikit": "LaxarJS/laxar_uikit#0.x"
+      "laxar_patterns": "LaxarJS/laxar_patterns#0.x"
    },
    "devDependencies": {
       "es5-shim": "2.3.x",

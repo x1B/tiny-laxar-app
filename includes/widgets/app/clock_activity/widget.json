@@ -1,6 +1,6 @@
 {
    "name": "ClockActivity",
-   "description": "My new LaxarJS activity",
+   "description": "A simple activity publishing a clock resource",
 
    "integration": {
       "technology": "angular",
