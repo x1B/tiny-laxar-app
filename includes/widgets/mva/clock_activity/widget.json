@@ -1,0 +1,26 @@
+{
+   "name": "ClockActivity",
+   "description": "My new LaxarJS activity",
+
+   "integration": {
+      "technology": "angular",
+      "type": "activity"
+   },
+
+   "features": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "required": [ "clock" ],
+      "properties": {
+         "clock": {
+            "type": "object",
+            "properties": {
+               "required": [ "resource" ],
+               "resource": {
+                  "type": "string"
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,3 @@
+[submodule "includes/lib/laxar"]
+	path = includes/lib/laxar
+	url = git@github.com:LaxarJS/laxar.git

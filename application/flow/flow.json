@@ -1,0 +1,11 @@
+{
+   "places": {
+      "entry": {
+         "redirectTo": "main"
+      },
+
+      "main": {
+         "page":  "page"
+      }
+   }
+}

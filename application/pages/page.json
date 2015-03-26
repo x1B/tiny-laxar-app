@@ -1,0 +1,33 @@
+{
+   "layout": "one_column",
+
+   "areas": {
+      "activities": [
+         {
+            "widget": "mva/clock_activity",
+            "features": {
+               "clock": {
+                  "resource": "theClock"
+               }
+            }
+         }
+      ],
+
+      "header": [
+      ],
+
+      "content": [
+         {
+            "widget": "mva/simple_widget",
+            "features": {
+               "clock": {
+                  "resource": "theClock"
+               }
+            }
+         }
+      ],
+
+      "footer": [
+      ]
+   }
+}
