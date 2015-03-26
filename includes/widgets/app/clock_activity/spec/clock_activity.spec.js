@@ -15,7 +15,7 @@ define( [
          testBed_ = ax.testing.portalMocksAngular.createControllerTestBed( 'app/clock_activity' );
          testBed_.featuresMock = {
             clock: {
-               resource: "myClock"
+               resource: 'myClock'
             }
          };
 

@@ -15,7 +15,7 @@ define( [
          testBed_ = ax.testing.portalMocksAngular.createControllerTestBed( 'app/simple_widget' );
          testBed_.featuresMock = {
             clock: {
-               resource: "myCLock"
+               resource: 'myClock'
             }
          };
 

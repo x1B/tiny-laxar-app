@@ -8,3 +8,4 @@ atlassian-ide-plugin.xml
 *.backup.json
 app-without-jquery-*.zip
 npm-debug.log
+test-results.xml

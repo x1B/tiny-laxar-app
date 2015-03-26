@@ -28,7 +28,7 @@ define( [
             data: {
                time: ''+new Date()
             }
-         } )
+         } );
       }
    }
 

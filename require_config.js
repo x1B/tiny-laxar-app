@@ -1,6 +1,7 @@
 var require = {
    baseUrl: 'bower_components',
    deps: [
+      // :TODO: Needed to dun spec tests: 'es5-shim/es5-shim',
       'requirejs'
    ],
    shim: {
