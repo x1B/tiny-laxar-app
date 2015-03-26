@@ -12,20 +12,26 @@ define( [
       var interval;
 
       eventBus.subscribe( 'beginLifecycleRequest', function() {
-         interval = $interval( function() {
-            eventBus.publish( 'didReplace.' + $scope.features.clock.resource, {
-               resource: $scope.features.clock.resource,
-               data: {
-                  time: ''+new Date()
-               }
-            } )
-         }, 1000 );
+         tick();
+         interval = $interval( tick, 1000 );
       } );
 
       eventBus.subscribe( 'endLifecycleRequest', function() {
-         interval.cancel();
+         $interval.cancel( interval );
       } );
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      function tick() {
+         eventBus.publish( 'didReplace.' + $scope.features.clock.resource, {
+            resource: $scope.features.clock.resource,
+            data: {
+               time: ''+new Date()
+            }
+         } )
+      }
    }
+
    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
    return ng.module(  'clockActivity', [] ).controller( 'ClockActivityController', Controller );

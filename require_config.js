@@ -37,24 +37,8 @@ var require = {
             return angular;
          }
       },
-      'bootstrap-affix': {
-         deps: [ 'jquery' ]
-      },
-      'bootstrap-tooltip': {
-         deps: [ 'jquery' ]
-      },
       'json-patch': {
          exports: 'jsonpatch'
-      },
-      'trunk8': {
-         deps: [ 'jquery' ]
-      },
-      underscore: {
-         exports: '_',
-         init: function () {
-            'use strict';
-            return this._.noConflict();
-         }
       }
    },
    packages: [
@@ -67,25 +51,13 @@ var require = {
          name: 'laxar_patterns',
          location: '../includes/lib/laxar_patterns',
          main: 'laxar_patterns'
-      },
-      {
-         name: 'laxar_uikit',
-         location: '../includes/lib/laxar_uikit',
-         main: 'laxar_uikit'
-      },
-      {
-         name: 'moment',
-         location: 'moment',
-         main: 'moment'
       }
    ],
    paths: {
       // LaxarJS Core:
       requirejs: 'requirejs/require',
       jquery: 'jquery/dist/jquery',
-      underscore: 'underscore/underscore',
       angular: 'angular/angular',
-      'angular-mocks': 'angular-mocks/angular-mocks',
       'angular-route': 'angular-route/angular-route',
       'angular-sanitize': 'angular-sanitize/angular-sanitize',
       jjv: 'jjv/lib/jjv',
@@ -94,6 +66,7 @@ var require = {
       // LaxarJS Core Testing:
       jasmine: 'jasmine/lib/jasmine-core/jasmine',
       q_mock: 'q_mock/q',
+      'angular-mocks': 'angular-mocks/angular-mocks',
 
       // LaxarJS Core Legacy:
       text: 'requirejs-plugins/lib/text',
@@ -101,12 +74,6 @@ var require = {
 
       // LaxarJS Patterns:
       'json-patch': 'fast-json-patch/src/json-patch-duplex',
-
-      // LaxarJS UIKit:
-      jquery_ui: 'jquery_ui/ui',
-      'bootstrap-tooltip': 'bootstrap-sass-official/assets/javascripts/bootstrap/tooltip',
-      'bootstrap-affix': 'bootstrap-sass-official/assets/javascripts/bootstrap/affix',
-      trunk8: 'trunk8/trunk8',
 
       // App Parts:
       'laxar-path-root': '..',
